@@ -80,6 +80,17 @@ The proposed 36-cell prototype is intentionally framed as **TRL 3 — experiment
      alt="Animated battery safety explainer"
      width="900">
 <br>
+     ## Circuit / System Architecture
+
+![Intelligent Battery Safety System Circuit Diagram](battery_safety_assets/photo_3.png)
+
+## Battery Pack and Main PCB
+
+![Battery pack and PCB](battery_safety_assets/photo_2.png)
+
+## Animated Explainer
+
+![Animated battery safety explainer](battery_safety_assets/intelligent_battery_safety_explainer.gif)
 <img src="https://img.shields.io/badge/Target%20accuracy-%E2%89%A595%25-00B894?style=flat-square" alt="Target accuracy at least 95 percent" />
 <img src="https://img.shields.io/badge/Sensor%20modalities-7-0284C7?style=flat-square" alt="Seven modalities" />
 <img src="https://img.shields.io/badge/Prototype%20scope-3%20modules%20%2F%2036%20cells-7C3AED?style=flat-square" alt="36-cell prototype" />
