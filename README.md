@@ -1,149 +1,264 @@
+<div align="center">
+
 # Intelligent Battery-Pack Safety and Early-Fault Detection System
 
-<!-- Optional: add docs/banner.png or assets/banner.png, then place it above this heading as the project banner. -->
+<!-- Optional hero asset: add a real image at docs/banner.png or assets/banner.png. -->
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00C2FF&center=true&vCenter=true&width=700&lines=Predicting+battery+failure+days+before+it+happens;AI-fused+sensor+safety+for+Li-ion+packs;HACKSPRINT+2026+%7C+Team+SL_ES_MP_07" alt="Project tagline" />
-</p>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=24&amp;duration=3000&amp;pause=1000&amp;color=00C2FF&amp;center=true&amp;vCenter=true&amp;width=850&amp;lines=Predicting+battery+failure+days+before+it+happens;Not+another+reactive+BMS;7-sensor+fusion+%2B+3-model+AI+ensemble;HACKSPRINT+2026+%7C+Team+SL_ES_MP_07" alt="Animated project tagline" />
 
-<p align="center">
-  <img src="https://img.shields.io/badge/TRL-3%20Experimental%20Proof%20of%20Concept-6A5ACD?style=for-the-badge" alt="TRL 3" />
-  <img src="https://img.shields.io/badge/Domain-Energy%20Security-00A86B?style=for-the-badge" alt="Energy Security" />
-  <img src="https://img.shields.io/badge/HACKSPRINT-Phase%201%20%E2%80%94%20Ideathon-FF8C00?style=for-the-badge" alt="HACKSPRINT Phase 1" />
-  <img src="https://img.shields.io/badge/Status-Prototype%20in%20Progress-1E90FF?style=for-the-badge" alt="Prototype in progress" />
-  <img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F%20at%20Bannari%20Amman%20Institute%20of%20Technology-DC143C?style=for-the-badge" alt="Made at Bannari Amman Institute of Technology" />
-</p>
+<br />
 
-<p align="center">
-  <a href="https://github.com/Aruneshw/hacksprint/stargazers"><img src="https://img.shields.io/github/stars/Aruneshw/hacksprint?style=flat-square" alt="GitHub stars" /></a>
-  <a href="https://github.com/Aruneshw/hacksprint/network/members"><img src="https://img.shields.io/github/forks/Aruneshw/hacksprint?style=flat-square" alt="GitHub forks" /></a>
-  <a href="https://github.com/Aruneshw/hacksprint/commits"><img src="https://img.shields.io/github/last-commit/Aruneshw/hacksprint?style=flat-square" alt="Last commit" /></a>
-</p>
+<img src="https://img.shields.io/badge/TRL-3%20%E2%80%94%20Experimental%20Proof%20of%20Concept-6C5CE7?style=for-the-badge" alt="TRL 3" />
+<img src="https://img.shields.io/badge/Domain-Energy%20Security-00B894?style=for-the-badge" alt="Energy Security" />
+<img src="https://img.shields.io/badge/License-MIT%20%E2%80%94%20confirm%20before%20release-64748B?style=for-the-badge" alt="MIT to be confirmed" />
+<img src="https://img.shields.io/badge/HACKSPRINT-Phase%201%20%E2%80%94%20Ideathon%202026-F59E0B?style=for-the-badge" alt="HACKSPRINT 2026" />
 
-> An AI-powered, sensor-fused Battery Management System (BMS) add-on designed to predict Li-ion battery failures days before they happen, using a single embedded PCB and a three-model AI ensemble.
+<br />
 
-<!-- Optional: insert docs/dashboard-preview.gif here when a real dashboard preview is available. -->
+<img src="https://img.shields.io/badge/ESP32--S3-Embedded%20Control-E7352C?style=for-the-badge&amp;logo=espressif&amp;logoColor=white" alt="ESP32-S3" />
+<img src="https://img.shields.io/badge/NXP%20i.MX%208M%20Plus-On--device%20AI-0055A4?style=for-the-badge&amp;logo=nxp&amp;logoColor=white" alt="NXP i.MX 8M Plus" />
+<img src="https://img.shields.io/badge/Python-AI%20workflow-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/TensorFlow%20%2F%20PyTorch-Framework%20TBD-FF6F00?style=for-the-badge" alt="Framework TBD" />
+<img src="https://img.shields.io/badge/scikit--learn-Workflow%20TBD-F7931E?style=for-the-badge&amp;logo=scikitlearn&amp;logoColor=white" alt="scikit-learn TBD" />
 
-## Table of Contents
+<br />
 
-- [Overview](#overview)
+<a href="https://github.com/Aruneshw/hacksprint/commits"><img src="https://img.shields.io/github/last-commit/Aruneshw/hacksprint?style=for-the-badge&amp;label=Last%20commit" alt="Last commit" /></a>
+<a href="https://github.com/Aruneshw/hacksprint"><img src="https://img.shields.io/github/repo-size/Aruneshw/hacksprint?style=for-the-badge&amp;label=Repository%20size" alt="Repository size" /></a>
+<a href="https://github.com/Aruneshw/hacksprint/issues"><img src="https://img.shields.io/github/issues/Aruneshw/hacksprint?style=for-the-badge&amp;label=Open%20issues" alt="Open issues" /></a>
+
+<br /><br />
+
+**An AI-powered, sensor-fused Battery Management System add-on that aims to predict Li-ion battery failures days before they happen—not seconds—using one embedded PCB and a three-model AI ensemble.**
+
+</div>
+
+---
+
+## 60-Second Overview
+
+| | Reactive BMS today | This system — design intent |
+| --- | --- | --- |
+| **Fault timing** | Often detected only after the fault begins, leaving seconds to respond | Detect precursor patterns with a goal of days of warning |
+| **Signals** | Primarily reactive operating signals | Seven sensing modalities across electrical, thermal, mechanical, acoustic, and gas behaviour |
+| **Accuracy** | ~70% baseline | ≥95% target at TRL 3 — not yet a measured result |
+| **Response** | Alarm after detection | Weighted risk score drives GREEN, YELLOW, or RED protection |
+| **Operations** | Manual inspection can miss silent degradation | On-board analysis plus cloud status and mobile/email/SMS alerting |
+
+<details>
+<summary><strong>Contents</strong></summary>
+
+- [Project Overview](#project-overview)
 - [The Problem](#the-problem)
-- [Our Solution](#our-solution)
 - [System Architecture](#system-architecture)
-- [Methodology](#methodology)
+- [Methodology: The Learning Loop](#methodology-the-learning-loop)
+- [AI Decision Logic](#ai-decision-logic)
+- [Sensing & Compute](#sensing--compute)
 - [Tech Stack](#tech-stack)
-- [Impact Targets](#impact-targets)
+- [Impact Snapshot](#impact-snapshot)
+- [Applications & Standards](#applications--standards)
 - [Repository Structure](#repository-structure)
 - [Getting Started](#getting-started)
-- [Team](#team)
 - [Roadmap](#roadmap)
+- [Team](#team)
 - [References](#references)
 - [License](#license)
 
-## Overview
+</details>
 
-Commercial BMS platforms often identify faults only after they begin, leaving only seconds to react to fast-moving hazards such as thermal runaway. This project combines electrical, thermal, mechanical, acoustic, and gas sensing with on-device intelligence to detect early degradation patterns. Its fused risk score supports practical, escalating actions—from normal operation to isolation and fire suppression—while giving operators live visibility through a cloud dashboard.
+## Project Overview
 
-Built for **HACKSPRINT Phase 1 — Ideathon Hackathon** in the **Energy Security** domain, the project is currently at **TRL 3: experimental proof of concept**.
+Battery packs rarely fail without leaving clues. A small voltage imbalance, unusual thermal behaviour, mechanical swelling, vibration, an acoustic signature, or early electrolyte off-gassing can each be a weak signal on its own. This project brings those signals together on one embedded PCB so they can be assessed as a coherent picture of pack health.
+
+At the centre is a three-model ensemble: an LSTM follows degradation over time, a Random Forest classifies known patterns, and anomaly detection searches for what known models have not seen. Their outputs are fused into a real-time risk score for remaining useful life (RUL), failure probability, degradation trend, and anomaly score.
+
+The proposed 36-cell prototype is intentionally framed as **TRL 3 — experimental proof of concept**. The ambition is a practical retrofit or OEM safety module for EVs, energy-storage systems, and industrial battery equipment—not a claim that the finished product has already been validated in the field.
+
+<div align="center">
+<img src="https://img.shields.io/badge/Target%20accuracy-%E2%89%A595%25-00B894?style=flat-square" alt="Target accuracy at least 95 percent" />
+<img src="https://img.shields.io/badge/Sensor%20modalities-7-0284C7?style=flat-square" alt="Seven modalities" />
+<img src="https://img.shields.io/badge/Prototype%20scope-3%20modules%20%2F%2036%20cells-7C3AED?style=flat-square" alt="36-cell prototype" />
+<img src="https://img.shields.io/badge/Hardware%20cost%20target-~%24500%20%2F%20200%20cells-F59E0B?style=flat-square" alt="Cost target" />
+</div>
 
 ## The Problem
 
-- Conventional BMS platforms are largely reactive, with typical fault-detection accuracy near 70% and minimal warning time.
-- Manual battery inspection is slow, difficult to scale, and can expose technicians to unsafe conditions.
-- Once thermal runaway begins, it can propagate through a pack within seconds, risking assets and people.
-- Operators need actionable prediction of degradation and remaining useful life—not only a post-fault alarm.
+The most dangerous battery event is often already moving too quickly by the time a conventional safety system reacts. The challenge is separating meaningful early degradation signatures from noise without creating a costly, false-alarm-prone system.
 
-## Our Solution
+- Commercial BMS units are reactive: they generally identify a fault only after it starts, giving operators seconds rather than hours to react.
+- Current baseline fault-detection accuracy is approximately 70%.
+- Acoustic and gas sensing have research value, but can be costly and prone to false alarms when not combined intelligently.
+- Manual inspection is slow, labour-intensive, and can miss silent cell degradation.
+- Once thermal runaway begins, it can propagate through a pack within seconds.
 
-### Hardware
-
-The planned prototype uses one main PCB on a 3-module, 36-cell Li-ion pack (12 cells per module).
-
-| Component | Function |
-| --- | --- |
-| Per-cell voltage sensing (0–5 V) | Tracks voltage, imbalance, and voltage-drop trends. |
-| Hall-effect current sensing (0–1000 A) | Measures pack current for load and fault analysis. |
-| NTC temperature sensing (−40 °C to 85 °C) | Monitors module temperatures and thermal changes. |
-| 4-channel strain / bridge sensing | Detects mechanical stress and deformation. |
-| 3-axis vibration accelerometer | Captures impact and vibration signatures. |
-| Acoustic microphone | Detects abnormal acoustic events. |
-| Gas sensor | Adds an early indicator of gas-emission events. |
-| NXP i.MX 8M Plus | Runs on-board inference on a Quad Cortex-A53 processor with a 4-TOPS NPU. |
-| ESP32-S3 | Performs sensor acquisition, timestamping, calibration, and safety-state control; STM32 is a planned production upgrade path. |
-| Ethernet / CAN / LTE | Supports vehicle, local, and cloud communications. |
-| Fuse, circuit breaker, and contactor | Provides protection and pack isolation. |
-
-### Software and AI
-
-| Component | Function |
-| --- | --- |
-| LSTM | Learns time-series trends for degradation and failure forecasting. |
-| Random Forest | Classifies multi-sensor fault patterns. |
-| Anomaly Detection | Finds outlier behaviour not covered by known fault classes. |
-| Risk-score fusion | Combines the three model outputs into a weighted real-time risk score. |
-| RUL and degradation analytics | Produces remaining useful life, failure probability, degradation trend, and anomaly score. |
-| Decision engine | Routes a risk score to protection actions and operator notifications. |
-| Cloud dashboard | Shows live SOC, SOH, voltage, current, temperature, and system status. |
-| Retraining workflow | Uses weekly field and lab fault-injection outcomes; NASA Li-ion and CALCE data support pre-training. |
+```mermaid
+flowchart LR
+    W[["Aim: identify precursor patterns<br/>with days of warning"]] -. early signals .-> A
+    A["Silent degradation"] --> B["Micro-cracking / early off-gassing"]
+    B --> C["Thermal runaway onset"]
+    C --> D["Pack propagation"]
+    D --> E["Failure<br/>⏱ escalation can occur in seconds"]
+    classDef warning fill:#E0F2FE,stroke:#0284C7,color:#0C4A6E,stroke-width:2px;
+    classDef hazard fill:#FFF7ED,stroke:#EA580C,color:#7C2D12,stroke-width:2px;
+    classDef critical fill:#FEE2E2,stroke:#DC2626,color:#7F1D1D,stroke-width:3px;
+    class W warning;
+    class A,B,C,D hazard;
+    class E critical;
+```
 
 ## System Architecture
 
 ```mermaid
-flowchart LR
-    S[Sensors\nVoltage • Current • Temperature\nStrain • Vibration • Acoustic • Gas]
-    A[Signal Conditioning / ADC]
-    C[BMS Control Unit\nESP32-S3]
-    I[AI Processing Unit\nNXP i.MX 8M Plus]
-    R[Risk Score / RUL Engine\nLSTM + Random Forest + Anomaly Detection]
-    D{Decision Layer\nGREEN • YELLOW • RED}
-    P[Protection Hardware\nFuse • Breaker • Contactor • Cooling]
-    H[Cloud Dashboard]
-    L[Alerts\nMobile • Email • SMS]
-
-    S --> A --> C
-    C <--> I
-    I --> R --> D
-    D --> P
-    D --> H
-    D --> L
+flowchart TD
+    subgraph SL["Sensing Layer — 7 modalities"]
+        V["Per-cell voltage<br/>0–5 V"]
+        I["Hall current<br/>0–1000 A"]
+        T["NTC temperature<br/>−40 °C to 85 °C"]
+        S["4-channel strain / bridge<br/>Swelling & deformation"]
+        X["3-axis accelerometer<br/>Vibration"]
+        M["Acoustic microphone<br/>Micro-crack / venting"]
+        G["Gas sensor<br/>Early off-gassing"]
+    end
+    subgraph SP["Signal Path"]
+        SC["Signal conditioning<br/>& isolation"] --> ADC["Multiplexed ADC"]
+    end
+    subgraph CP["Compute"]
+        MCU["ESP32-S3 BMS control unit<br/>Acquisition • timestamping • calibration<br/>Safety state machine"]
+        NPU["NXP i.MX 8M Plus<br/>Quad Cortex-A53 + 4-TOPS NPU<br/>On-board inference"]
+    end
+    subgraph AI["AI Ensemble"]
+        LSTM["LSTM<br/>Time-series trend"] & RF["Random Forest<br/>Pattern classification"] & AD["Anomaly detection<br/>Novel-fault search"]
+        F["Weighted fusion"] --> R["Risk score + RUL<br/>Failure probability • trend • anomaly score"]
+    end
+    subgraph DR["Decision & Response"]
+        DE{"GREEN / YELLOW / RED<br/>Decision engine"} --> PH["Fuse • breaker • contactor<br/>Cooling • fire suppression"]
+    end
+    subgraph VO["Visibility"]
+        CD["Cloud dashboard<br/>SOC • SOH • V • I • T • status"] & AL["Mobile • email • SMS alerts"] & DL["Data logging<br/>Weekly retraining feedback"]
+    end
+    V & I & T & S & X & M & G --> SC
+    ADC --> MCU
+    MCU <--> NPU
+    NPU --> LSTM & RF & AD
+    LSTM & RF & AD --> F
+    R --> DE & CD & DL
+    DE --> AL
+    DL -. labelled outcomes .-> NPU
+    classDef sensing fill:#E0F2FE,stroke:#0284C7,color:#0C4A6E,stroke-width:1.5px;
+    classDef signal fill:#ECFDF5,stroke:#059669,color:#064E3B,stroke-width:1.5px;
+    classDef compute fill:#EDE9FE,stroke:#7C3AED,color:#4C1D95,stroke-width:2px;
+    classDef ai fill:#F3E8FF,stroke:#9333EA,color:#581C87,stroke-width:1.5px;
+    classDef decision fill:#FFF7ED,stroke:#F59E0B,color:#78350F,stroke-width:2px;
+    classDef protection fill:#FEE2E2,stroke:#DC2626,color:#7F1D1D,stroke-width:2px;
+    classDef output fill:#DCFCE7,stroke:#16A34A,color:#14532D,stroke-width:1.5px;
+    class V,I,T,S,X,M,G sensing;
+    class SC,ADC signal;
+    class MCU,NPU compute;
+    class LSTM,RF,AD,F,R ai;
+    class DE decision;
+    class PH protection;
+    class CD,AL,DL output;
 ```
 
-### Safety States
+**Data flow in plain English:** sense → condition → analyse → score → protect → learn. Fast acquisition and safety control stay close to the pack while the AI processor builds an operator-facing risk picture.
 
-| State | Risk score | Action |
-| --- | --- | --- |
-| GREEN | 0.0–0.3 | Normal operation. |
-| YELLOW | 0.3–0.7 | Reduce power and enable cooling. |
-| RED | 0.7–1.0 | Shut down, isolate, and trigger fire-suppression response. |
-
-## Methodology
+## Methodology: The Learning Loop
 
 ```mermaid
 flowchart LR
-    A[1. Data Acquisition\nSample all seven sensor signals] --> B[2. Feature Extraction\nImbalance • voltage-drop rate • SOC • SOH • RUL indicators]
-    B --> C[3. AI / ML Analysis\nLSTM + Random Forest + Anomaly Detection]
-    C --> D[4. Decision & Action\nGREEN / YELLOW / RED protection routing]
-    D --> E[5. Feedback & Learning\nLabel outcomes and retrain weekly]
-    E --> A
+    A["01<br/>Data Acquisition"] --> B["02<br/>Feature Extraction"] --> C["03<br/>AI / ML Analysis"] --> D["04<br/>Decision & Action"] --> E["05<br/>Feedback & Learning"]
+    E -->|Labelled outcomes + weekly retraining| A
+    classDef stage fill:#E0F2FE,stroke:#0284C7,color:#0C4A6E,stroke-width:2px;
+    classDef analyse fill:#F3E8FF,stroke:#9333EA,color:#581C87,stroke-width:2px;
+    classDef action fill:#FFF7ED,stroke:#F59E0B,color:#78350F,stroke-width:2px;
+    classDef learn fill:#DCFCE7,stroke:#16A34A,color:#14532D,stroke-width:2px;
+    class A,B stage;
+    class C analyse;
+    class D action;
+    class E learn;
 ```
+
+<details><summary><strong>01 — Data Acquisition</strong></summary>
+All seven sensor signals are sampled by cell or module as applicable, then filtered and scaled before analysis.
+</details>
+
+<details><summary><strong>02 — Feature Extraction</strong></summary>
+Features include cell imbalance, voltage-drop rate, SOC, SOH, and indicators relevant to RUL.
+</details>
+
+<details><summary><strong>03 — AI / ML Analysis</strong></summary>
+The LSTM models time-series degradation, Random Forest classifies patterns, and anomaly detection searches for unfamiliar behaviour before weighted fusion.
+</details>
+
+<details><summary><strong>04 — Decision & Action</strong></summary>
+The decision engine maps risk to GREEN, YELLOW, or RED actions, scaling from normal operation to shutdown and isolation.
+</details>
+
+<details><summary><strong>05 — Feedback & Learning</strong></summary>
+Field and lab fault-injection outcomes (overcharge, over-discharge, and thermal abuse) are labelled for planned weekly retraining. NASA Li-ion and CALCE data support the training approach.
+</details>
+
+## AI Decision Logic
+
+```mermaid
+stateDiagram-v2
+    [*] --> GREEN
+    GREEN: GREEN | 0.0–0.3<br/>Normal operation
+    YELLOW: YELLOW | 0.3–0.7<br/>Reduced rate + active cooling
+    RED: RED | 0.7–1.0<br/>Shutdown + isolation + suppression
+    GREEN --> YELLOW: risk rises above 0.3
+    YELLOW --> RED: risk rises above 0.7
+    YELLOW --> GREEN: risk returns to GREEN range
+    RED --> GREEN: verified safe recovery
+```
+
+| State | Risk score | Automatic action |
+| --- | --- | --- |
+| 🟢 **GREEN** | 0.0–0.3 | Normal operation. |
+| 🟡 **YELLOW** | 0.3–0.7 | Reduce charge/discharge rate and activate cooling. |
+| 🔴 **RED** | 0.7–1.0 | Immediate shutdown, isolation, and fire-suppression response. |
+
+> RED-to-GREEN represents recovery only after the system has been verified safe; it is not an automatic bypass of a critical event.
+
+## Sensing & Compute
+
+<details>
+<summary><strong>Full sensor specification</strong></summary>
+
+| Sensor | Contribution | Range / implementation |
+| --- | --- | --- |
+| Per-cell voltage | Cell health and imbalance | 0–5 V |
+| Hall-effect current | Pack-level draw | 0–1000 A |
+| NTC temperature | Per-module thermal monitoring | −40 °C to 85 °C |
+| 4-channel strain / bridge | Swelling and deformation | 4 channels |
+| 3-axis vibration accelerometer | Structural anomaly detection | 3 axes |
+| Acoustic microphone | Micro-crack and venting sound | Single channel |
+| Gas sensor | Electrolyte off-gassing | Single channel |
+
+</details>
+
+| Layer | Planned responsibility |
+| --- | --- |
+| **AI processor** | NXP i.MX 8M Plus (Quad Cortex-A53 + 4-TOPS NPU) for on-board inference. |
+| **Control MCU** | ESP32-S3 with Wi-Fi/BLE for acquisition, timestamping, calibration, and safety state machine. |
+| **Production path** | STM32 upgrade path planned for production-grade determinism. |
+| **Communications** | Ethernet, CAN, and LTE. |
+| **Power / protection** | 5 V, 3.3 V, 1.8 V rails; main fuse, circuit breaker, and contactor. |
 
 ## Tech Stack
 
-<p>
-  <img src="https://img.shields.io/badge/ESP32--S3-000000?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32-S3" />
-  <img src="https://img.shields.io/badge/NXP%20i.MX%208M%20Plus-0055A4?style=for-the-badge&logo=nxp&logoColor=white" alt="NXP i.MX 8M Plus" />
-  <img src="https://img.shields.io/badge/ARM%20Cortex--A53-0091BD?style=for-the-badge&logo=arm&logoColor=white" alt="ARM Cortex-A53" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/TensorFlow%20or%20PyTorch-Planned-FF6F00?style=for-the-badge" alt="TensorFlow or PyTorch planned" />
-  <img src="https://img.shields.io/badge/scikit--learn-Planned-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="scikit-learn planned" />
-  <img src="https://img.shields.io/badge/Embedded%20Linux%20%2F%20RTOS-Planned-2E8B57?style=for-the-badge" alt="Embedded Linux or RTOS planned" />
-  <img src="https://img.shields.io/badge/MQTT%20%2F%20CAN-Planned-660066?style=for-the-badge" alt="MQTT or CAN planned" />
-  <img src="https://img.shields.io/badge/Dashboard%20%2F%20Cloud-TBD-808080?style=for-the-badge" alt="Dashboard and cloud to be confirmed" />
-</p>
+<!-- CONFIRM before removing TBD labels: the supplied workspace contains no source code, manifests, or build configuration. -->
 
-> Framework, RTOS, dashboard, and cloud-provider choices are planned or to be confirmed; this README intentionally does not claim they are already implemented.
+| Category | Confirmed or planned platform |
+| --- | --- |
+| ⚙️ **Hardware** | <img src="https://img.shields.io/badge/NXP-i.MX%208M%20Plus-0055A4?style=for-the-badge&amp;logo=nxp&amp;logoColor=white" alt="NXP" /> <img src="https://img.shields.io/badge/ARM-Cortex--A53-0091BD?style=for-the-badge&amp;logo=arm&amp;logoColor=white" alt="ARM Cortex-A53" /> <img src="https://img.shields.io/badge/ESP32--S3-E7352C?style=for-the-badge&amp;logo=espressif&amp;logoColor=white" alt="ESP32-S3" /> |
+| 🧩 **Embedded** | <img src="https://img.shields.io/badge/Wi--Fi%20%2F%20BLE-ESP32--S3-0284C7?style=for-the-badge" alt="Wi-Fi BLE" /> <img src="https://img.shields.io/badge/CAN-Planned-475569?style=for-the-badge" alt="CAN planned" /> <img src="https://img.shields.io/badge/STM32-Upgrade%20path-03234B?style=for-the-badge&amp;logo=stmicroelectronics&amp;logoColor=white" alt="STM32 upgrade path" /> |
+| 🧠 **AI / ML** | <img src="https://img.shields.io/badge/LSTM-Time--series-7C3AED?style=for-the-badge" alt="LSTM" /> <img src="https://img.shields.io/badge/Random%20Forest-Classification-7C3AED?style=for-the-badge" alt="Random Forest" /> <img src="https://img.shields.io/badge/Anomaly%20Detection-Outliers-7C3AED?style=for-the-badge" alt="Anomaly detection" /> <img src="https://img.shields.io/badge/Python-Workflow%20planned-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python planned" /> |
+| ☁️ **Cloud / dashboard** | <img src="https://img.shields.io/badge/Cloud%20dashboard-Planned-16A34A?style=for-the-badge" alt="Cloud dashboard planned" /> <img src="https://img.shields.io/badge/Mobile%20%2F%20Email%20%2F%20SMS-Alerting-16A34A?style=for-the-badge" alt="Alerting" /> <img src="https://img.shields.io/badge/Provider%20%2F%20framework-TBD-64748B?style=for-the-badge" alt="Provider TBD" /> |
 
-## Impact Targets
+## Impact Snapshot
+
+### 🎯 Design targets — not measured results
 
 | Metric | Target |
 | --- | --- |
@@ -154,34 +269,65 @@ flowchart LR
 | Battery-life extension | 15–25% |
 | Payback period | Under 1 month |
 
-The system is designed to align with AIS-156 (India), IEC 62619, UL 1973, UL 2580, and applicable BIS requirements. Target applications include EVs, grid-scale energy-storage systems, and industrial equipment.
+```mermaid
+xychart-beta
+    title "Fault-detection accuracy: baseline vs. design target"
+    x-axis ["Reactive BMS baseline", "System target"]
+    y-axis "Accuracy (%)" 0 --> 100
+    bar [70, 95]
+```
+
+The chart communicates the stated baseline and target only; it does **not** represent completed validation.
+
+## Applications & Standards
+
+| Intended applications | Standards alignment |
+| --- | --- |
+| Electric vehicles (EVs) | AIS-156 (India) |
+| Grid-scale Energy Storage Systems (ESS) | IEC 62619 |
+| Industrial battery equipment | UL 1973 |
+|  | UL 2580 |
+|  | BIS requirements, where applicable |
+
+**Core subjects:** Embedded Systems · BMS · AI/ML · IoT · Power Electronics
 
 ## Repository Structure
 
-The workspace supplied for this README does not yet contain project folders. As implementation artifacts are added, organise them using a structure such as:
+The supplied workspace currently contains only this README; no firmware, model code, hardware files, package manifest, or build configuration is present. This tree reflects the actual workspace rather than inventing folders that do not exist.
 
 ```text
-├── firmware/          # ESP32-S3 / STM32 embedded code
-├── ai-models/         # LSTM, Random Forest, anomaly-detection training and inference
-├── hardware/          # PCB schematics, sensor wiring, BOM
-├── dashboard/         # Cloud/web monitoring dashboard
-├── docs/              # Report, diagrams, datasheets
-├── data/              # Sample/public datasets (NASA Li-ion, CALCE)
+.
 └── README.md
 ```
 
 ## Getting Started
 
-Build and setup files have not been supplied in the current workspace, so no installation commands are documented yet. Once firmware, model, or dashboard tooling is committed, add the exact prerequisites, dependency installation, flashing, and run commands here.
+There are no build or runtime files in the supplied workspace, so it would be inaccurate to publish installation, flashing, training, or dashboard commands. Add this section when the repository contains the corresponding real tooling.
+
+## Roadmap
+
+These are planning-stage estimates to communicate direction at TRL 3, not test evidence or release milestones.
+
+| Phase | Planning signal | Status |
+| --- | --- | --- |
+| System design & sensor selection | `████████░░` 80% | Architecture defined; subject to prototype review |
+| PCB integration | `████░░░░░░` 40% | In development |
+| AI ensemble development | `████░░░░░░` 40% | In development |
+| 36-cell prototype validation | `██░░░░░░░░` 20% | Planned |
+| Field pilot | `░░░░░░░░░░` 0% | Planned after prototype validation |
+| Patent filing | `░░░░░░░░░░` 0% | Potential outcome |
+| Ensemble RUL publication | `░░░░░░░░░░` 0% | Potential outcome |
+
+**Intended progression:** working 36-cell prototype → market-ready retrofit/OEM safety module → potential patent and publication → Safety-as-a-Service for EV fleets and ESS operators.
 
 ## Team
 
-**Team ID:** SL_ES_MP_07  
+**Team ID:** <code>SL_ES_MP_07</code>    
 **Institution:** Bannari Amman Institute of Technology (Autonomous, Affiliated to Anna University, Chennai)
 
 | Name | Role |
 | --- | --- |
-| Aruneshwaran K | Team Leader |
+| Aruneshwaran K | **Team Leader** |
 | Harinisri M | Team Member |
 | Hemavarthini V B | Team Member |
 | Varunraj V K | Team Member |
@@ -189,35 +335,33 @@ Build and setup files have not been supplied in the current workspace, so no ins
 | Mukesh S | Team Member |
 | Sundar S (EE1908) | Faculty Mentor |
 
-## Roadmap
-
-- [x] Design and sensor selection
-- [ ] PCB integration — in progress
-- [ ] AI ensemble training — in progress
-- [ ] 36-cell prototype validation — planned
-- [ ] Field pilot — planned
-- [ ] Patent filing — potential
-- [ ] Publication on the LSTM + RF + anomaly-detection ensemble — potential
-
-Expected project outcomes include a working 36-cell prototype, a market-ready retrofit/OEM safety module, potential patent and publication opportunities, and a Safety-as-a-Service model for EV fleets and ESS operators.
-
 ## References
 
-The report’s five reference entries were not included with this repository brief. Add their full bibliographic details here before publication; the following source categories are currently used by the project:
-
-1. NASA Prognostics Center of Excellence — Li-ion Battery Aging Datasets.
-2. University of Maryland CALCE Battery Research Group — battery datasets and research resources.
-3. Automotive Industry Standard AIS-156 — safety requirements for traction-battery systems.
-4. IEC 62619 — safety requirements for industrial secondary lithium cells and batteries.
-5. UL 1973 and UL 2580 — battery safety standards for stationary, motive auxiliary, and electric-vehicle applications.
+1. Hannan, M. A., Lipu, M. S. H., Hussain, A., and Mohamed, A. “A Review of Lithium-Ion Battery State of Charge Estimation and Management System in Electric Vehicle Applications.” *Renewable and Sustainable Energy Reviews*, vol. 78, 2017.
+2. Severson, K. A., et al. “Data-Driven Prediction of Battery Cycle Life Before Capacity Degradation.” *Nature Energy*, vol. 4, 2019.
+3. Government of India, Ministry of Road Transport and Highways. *AIS-156: Electric Vehicles Battery Pack Safety Requirements.*
+4. UL. *UL 1973: Standard for Batteries for Use in Stationary, Vehicle Auxiliary Power and Light Electric Rail Applications.*
+5. IEC. *IEC 62619: Secondary Cells and Batteries Containing Alkaline or Other Non-Acid Electrolytes — Safety Requirements.*
 
 ## License
 
-No `LICENSE` file was available in the supplied workspace. The intended license is **to be confirmed**; add an MIT license only after the repository owner confirms that choice.
+<img src="https://img.shields.io/badge/License-MIT-00B894?style=flat-square" alt="MIT license" />
+
+This README is prepared for an MIT-licensed repository, as requested. A <code>LICENSE</code> file was not present in the supplied workspace—add the official MIT license text and confirm the license choice before publishing or distributing the project.
 
 ---
 
-<p align="center">
-  Built for HACKSPRINT Phase 1 — Ideathon Hackathon, 2026<br />
-  <img src="https://komarev.com/ghpvc/?username=Aruneshw&repo=hacksprint&label=Repository%20views&color=00C2FF&style=flat" alt="Repository views" />
-</p>
+<div align="center">
+
+Built for <strong>HACKSPRINT Phase 1 — Ideathon Hackathon, 2026</strong><br />
+at Bannari Amman Institute of Technology
+
+<br />
+
+<img src="https://komarev.com/ghpvc/?username=Aruneshw&amp;repo=hacksprint&amp;label=Repository%20views&amp;color=00C2FF&amp;style=flat" alt="Repository visitor counter" />
+
+<br /><br />
+
+<em>Turning a silent battery hazard into a system that speaks up—days before it matters.</em>
+
+</div>
