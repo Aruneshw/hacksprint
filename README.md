@@ -75,6 +75,11 @@ At the centre is a three-model ensemble: an LSTM follows degradation over time, 
 The proposed 36-cell prototype is intentionally framed as **TRL 3 — experimental proof of concept**. The ambition is a practical retrofit or OEM safety module for EVs, energy-storage systems, and industrial battery equipment—not a claim that the finished product has already been validated in the field.
 
 <div align="center">
+<br>
+<img src="battery_safety_assets/intelligent_battery_safety_explainer.gif"
+     alt="Animated battery safety explainer"
+     width="900">
+<br>
 <img src="https://img.shields.io/badge/Target%20accuracy-%E2%89%A595%25-00B894?style=flat-square" alt="Target accuracy at least 95 percent" />
 <img src="https://img.shields.io/badge/Sensor%20modalities-7-0284C7?style=flat-square" alt="Seven modalities" />
 <img src="https://img.shields.io/badge/Prototype%20scope-3%20modules%20%2F%2036%20cells-7C3AED?style=flat-square" alt="36-cell prototype" />
